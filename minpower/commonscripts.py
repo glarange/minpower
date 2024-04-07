@@ -104,12 +104,12 @@ def gen_time_dataframe(generators, times, values=()):
 
 
 def ts_from_csv(
-    filename, index_col=0, squeeze=True, timezone=None, is_df=True, **kwargs
+    filename, index_col=0, timezone=None, is_df=True, **kwargs
 ):
     kwargs["header"] = 0 if is_df else None
 
     return pd.read_csv(
-        filename, index_col=index_col, squeeze=squeeze, parse_dates=[0], **kwargs
+        filename, index_col=index_col, parse_dates=[0], **kwargs
     )
 
 
